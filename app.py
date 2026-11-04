@@ -22,7 +22,7 @@ model = load_ai_model()
 
 # Sidebar สำหรับตั้งค่า API และเงินทุน
 st.sidebar.header("⚙️ ตั้งค่าระบบ & API")
-api_token = st.sidebar.text_input("PandaScore API Token", type="password", placeholder="ใส่ Token ของคุณที่นี่")
+api_token = st.sidebar.text_input("PandaScore API Token", type="password", placeholder="kL5q5X-Y0MFxQ9otvf7xEKy3aUPPS4tqcrlEhu49Qh7NpTd7qn8")
 bankroll = st.sidebar.number_input("💰 ทุนทั้งหมด (Bankroll - บาท)", 100, 100000, 10000, step=500)
 kelly_fraction = st.sidebar.slider("🛡️ Kelly Fraction (ระดับความเสี่ยง)", 0.1, 1.0, 0.25)
 
