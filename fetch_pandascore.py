@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 
 # ใส่ API Token ของคุณที่ได้จากหน้า Dashboard ของ PandaScore
-API_TOKEN = "YOUR_PANDASCORE_API_TOKEN"
+API_TOKEN = "kL5q5X-Y0MFxQ9otvf7xEKy3aUPPS4tqcrlEhu49Qh7NpTd7qn8"
 BASE_URL = "https://api.pandascore.co"
 
 def get_cs2_live_matches():
