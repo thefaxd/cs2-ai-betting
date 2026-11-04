@@ -3,6 +3,30 @@ import pandas as pd
 import numpy as np
 import joblib
 
+import joblib
+import numpy as np
+
+# 1. โหลดโมเดล AI ที่เคยเทรนไว้
+model = joblib.load('cs2_win_model.joblib')
+
+def predict_match_from_api_data(team_a_stats, team_b_stats):
+    """
+    team_a_stats และ team_b_stats คือข้อมูลสถิติที่ดึงมาจาก API หรือฐานข้อมูล
+    รูปแบบต้องตรงกับ Features ที่ใช้ตอนเทรนโมเดล
+    """
+    features = np.array([[
+        team_a_stats['winrate_3m'],
+        team_b_stats['winrate_3m'],
+        team_a_stats['hltv_rating'],
+        team_b_stats['hltv_rating'],
+        team_a_stats['h2h_wins'],
+        team_b_stats['h2h_wins']
+    ]])
+    
+    # คำนวณความน่าจะเป็นที่ Team A จะชนะ
+    prob_a = model.predict_proba(features)[0][1]
+    return prob_a
+
 # เซ็ตหน้าตาเว็บ
 st.set_page_config(page_title="CS2 Value Bet AI Predictor", page_icon="🎮", layout="wide")
 
