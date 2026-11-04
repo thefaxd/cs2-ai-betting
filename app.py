@@ -87,7 +87,7 @@ if len(opponents) >= 2:
 else:
     team_a_name, team_b_name = "Team A", "Team B"
 
-st.info(🏆 **ทัวร์นาเมนต์:** {tournament_name} | **แมตช์:** {team_a_name} vs {team_b_name})
+st.info(f"🏆 **ทัวร์นาเมนต์:** {tournament_name} | **แมตช์:** {team_a_name} vs {team_b_name}")
 
 # ดึงสถิติ (ถ้ามีใน mock หรือกำหนดค่าเริ่มต้นให้ปรับแต่งได้)
 default_stats = selected_match.get('mock_stats', {
